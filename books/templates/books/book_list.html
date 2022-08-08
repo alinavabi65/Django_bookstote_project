@@ -1,0 +1,18 @@
+{% extends '_base.html' %}
+
+{% block page_title %}
+    Book List View
+{% endblock %}
+
+{% block content %}
+    {% for book in books %}
+        <h1>Title :</h1>{{ book.title }}
+        <br>
+        <h2>Author :</h2>{{ book.author }}
+        <br>
+        <h5>Description :</h5>{{ book.description }}
+        <br>
+        <h5>Price :</h5>{{ book.price }}
+    {% endfor %}
+
+{% endblock %}
