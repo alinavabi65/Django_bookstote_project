@@ -1,0 +1,12 @@
+{% extends '_base.html' %}
+
+{% block page_title %}
+    Book List View
+{% endblock %}
+
+{% block content %}
+        <h1>{{ books.title }}</h1>
+        <p class="small text-muted mt-2">By: {{ books.author }}</p>
+        <p class="mt-2">{{ books.description }}</p>
+        <p class="mt-2">{{ books.price }}</p>
+{% endblock %}
