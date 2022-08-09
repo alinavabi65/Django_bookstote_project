@@ -9,4 +9,5 @@
         <p class="small text-muted mt-2">By: {{ books.author }}</p>
         <p class="mt-2">{{ books.description }}</p>
         <p class="mt-2">{{ books.price }}</p>
+    <a href="{% url 'list_view' %}">All Book</a>
 {% endblock %}

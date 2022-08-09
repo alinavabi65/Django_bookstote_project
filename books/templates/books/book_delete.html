@@ -1,0 +1,10 @@
+{% extends '_base.html' %}
+
+{% block page_title %}
+    Book Delete View
+{% endblock %}
+
+{% block content %}
+    <h1>Are you sure you want delete {{ book.title }} ?</h1>
+    <button type="submit" class="btn btn-danger">Delete</button>
+{% endblock %}

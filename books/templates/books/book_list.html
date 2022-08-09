@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block content %}
+    <a href="{% url 'book_create' %}">Add New Book</a>
     {% for book in books %}
         <a href="{{book.get_absolut_url }}"><h1>{{ book.title }}</h1></a>
         <br>
@@ -13,7 +14,7 @@
         <h5>Description :</h5>{{ book.description }}
         <br>
         <h5>Price :</h5>{{ book.price }}
+        <a href="{% url 'book_delete' book.id %}">Delete Book</a>|<a href="{% url 'book_update' book.id %}">Update Book</a>
         <p>---------------------------------------</p>
     {% endfor %}
-
 {% endblock %}
