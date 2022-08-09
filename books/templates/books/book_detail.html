@@ -1,13 +1,13 @@
 {% extends '_base.html' %}
 
 {% block page_title %}
-    Book List View
+    Book Detail View
 {% endblock %}
 
 {% block content %}
         <h1>{{ books.title }}</h1>
-        <p class="small text-muted mt-2">By: {{ books.author }}</p>
-        <p class="mt-2">{{ books.description }}</p>
+        <p class="small text-muted mt-2">By: {{ books.author|capfirst }}</p>
+        <p class="mt-2">{{ books.description|linebreaks }}</p>
         <p class="mt-2">{{ books.price }}</p>
     <a href="{% url 'list_view' %}">All Book</a>
 {% endblock %}

@@ -7,11 +7,11 @@
 {% block content %}
     <a href="{% url 'book_create' %}">Add New Book</a>
     {% for book in books %}
-        <a href="{{book.get_absolut_url }}"><h1>{{ book.title }}</h1></a>
+        <a href="{{ book.get_absolute_url }}"><h1>{{ book.title|capfirst }}</h1></a>
         <br>
-        <h2>Author :</h2>{{ book.author }}
+        <h2>Author :</h2>{{ book.author|capfirst }}
         <br>
-        <h5>Description :</h5>{{ book.description }}
+        <h5>Description :</h5>{{ book.description|truncatewords:10 }}
         <br>
         <h5>Price :</h5>{{ book.price }}
         <a href="{% url 'book_delete' book.id %}">Delete Book</a>|<a href="{% url 'book_update' book.id %}">Update Book</a>
