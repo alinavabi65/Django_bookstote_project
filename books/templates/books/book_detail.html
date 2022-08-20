@@ -22,6 +22,7 @@
                         <div class="col-xs-12 col-md-6 text-center ">
                             <h1>{{ books.title }}</h1>
                             <h5 class="small my-1"><span class="text-muted">Author:</span>{{ books.author }}</h5>
+                            <h5 class="small my-1"><span class="text-muted">Creator:</span>{{ books.user.username }}</h5>
                             <a href="{% url 'book_update' books.id %}">Edit</a>
                             <span>
                             |
